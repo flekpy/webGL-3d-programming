@@ -34,7 +34,7 @@ function main() {
 
   // получаем ссылку на uniform переменную u_FragColor
   const u_FragColor = gl.getUniformLocation(gl.program, 'u_FragColor')
-  if (a_Position < 0 && u_FragColor !== null) {
+  if (a_Position < 0 && !u_FragColor) {
     console.log('failed to get the storage location of a_Position')
     return
   }
