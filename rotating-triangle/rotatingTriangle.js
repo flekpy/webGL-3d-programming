@@ -94,6 +94,7 @@ function initVertextBuffers(gl) {
 function draw(gl, n, currentAngle, modelMatrix, u_ModelMatrix) {
   // определяем матрицу вращения
   modelMatrix.setRotate(currentAngle, 0, 0, 1)
+  modelMatrix.translate(0.35, 0, 0)
 
   // передаем матрицу в вершинный шейдер
   gl.uniformMatrix4fv(u_ModelMatrix, false, modelMatrix.elements)
