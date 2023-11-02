@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>hello world</title>
+  </head>
+  <style>
+    html, body {
+      margin: 0px;
+      padding: 0px;
+      background-color: black;
+    }
+
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+  </style>
+  <body onload="main()">
+    <canvas id="webGL">please use the browser supporting canvas</canvas>
+    <script id="vertex-shader-2d" type="notjs">
+      attribute vec4 a_position;
+      
+      void main() {
+        gl_Position = a_position;
+      }
+    </script>
+
+    <script id="fragment-shader-2d" type="notjs">
+      precision mediump float;
+
+      void main() {
+        gl_FragColor = vec4(1, 0, 0.5, 1);
+      }
+    </script>
+
+    <script src="helloWorld.js"></script>
+  </body>
+</html>
